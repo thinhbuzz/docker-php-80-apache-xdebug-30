@@ -1,4 +1,5 @@
 Docker image contains:
+- git
 - php 7.4
 - mod rewrite
 - composer
