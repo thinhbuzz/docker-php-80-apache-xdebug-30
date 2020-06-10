@@ -5,6 +5,7 @@ RUN apt-get update -y && apt-get install -y libpng-dev git libzip-dev zip
 RUN docker-php-ext-install mysqli && docker-php-ext-install gd && docker-php-ext-install zip
 RUN pecl install xdebug-2.9.1
 RUN curl -L https://getcomposer.org/composer-stable.phar -o /usr/local/bin/composer && chmod +x /usr/local/bin/composer
+RUN composer global require hirak/prestissimo
 
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 COPY "./php-upload.ini" "$PHP_INI_DIR/conf.d/php-upload.ini"
