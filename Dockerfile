@@ -1,6 +1,6 @@
 FROM php:7.4-apache
 
-RUN apt-get update -y && apt-get install -y libpng-dev git libzip-dev zip
+RUN apt-get update -y && apt-get install -y libjpeg62-turbo-dev libpng-dev git libzip-dev zip
 
 RUN docker-php-ext-install mysqli pdo_mysql gd zip
 RUN pecl install xdebug-2.9.1
