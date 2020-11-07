@@ -2,7 +2,6 @@ version: '3'
 services:
   webserver:
     image: thinhbuzz/php-74-apache-xdebug-29-rewrite
-    container_name: webserver
     ports:
       - "80:80"
     volumes:
@@ -11,7 +10,6 @@ services:
     environment:
       XDEBUG_CONFIG: remote_host=host.docker.internal
   database:
-    container_name: database
     image: mysql:5.7
     command: --default-authentication-plugin=mysql_native_password --sql-mode=""
     restart: "no"
