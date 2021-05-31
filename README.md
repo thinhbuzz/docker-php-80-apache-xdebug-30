@@ -1,9 +1,9 @@
 Docker image contains:
 - git
-- php 7.4
+- php 8.0
 - mod rewrite
 - composer
 - apache
 - zip extension
-- xdebug 2.9
+- xdebug 3.0
 - upload size set to 20MB

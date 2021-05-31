@@ -1,7 +1,7 @@
 version: '3'
 services:
   webserver:
-    image: thinhbuzz/php-74-apache-xdebug-29-rewrite
+    image: thinhbuzz/php-80-apache-xdebug-30-rewrite
     ports:
       - "80:80"
     volumes:
