@@ -6,4 +6,4 @@ Docker image contains:
 - apache
 - zip extension
 - xdebug 3.0
-- upload size set to 20MB
+- upload size set to 100MB
