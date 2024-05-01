@@ -6,6 +6,7 @@ RUN docker-php-ext-configure gd --with-jpeg=/usr/include/
 RUN docker-php-ext-install mysqli pdo_mysql gd zip bcmath
 RUN pecl install xdebug-3.3.2 redis
 RUN docker-php-ext-enable redis
+RUN a2enmod headers
 RUN curl -L https://getcomposer.org/composer-stable.phar -o /usr/local/bin/composer && chmod +x /usr/local/bin/composer
 
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
