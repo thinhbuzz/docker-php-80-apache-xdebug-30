@@ -1,10 +1,11 @@
-FROM php:8.3-apache
+FROM php:8.4-apache
+ENV COMPOSER_ROOT_VERSION=1
 
 RUN apt-get update -y && apt-get install -y libjpeg62-turbo-dev libpng-dev git libzip-dev zip
 
 RUN docker-php-ext-configure gd --with-jpeg=/usr/include/
 RUN docker-php-ext-install mysqli pdo_mysql gd zip bcmath
-RUN pecl install xdebug-3.3.2 redis
+RUN pecl install xdebug-3.4.1 redis
 RUN docker-php-ext-enable redis
 RUN a2enmod headers
 RUN curl -L https://getcomposer.org/composer-stable.phar -o /usr/local/bin/composer && chmod +x /usr/local/bin/composer

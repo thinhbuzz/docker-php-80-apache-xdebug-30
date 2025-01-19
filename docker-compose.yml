@@ -1,12 +1,14 @@
 version: '3'
 services:
   webserver:
-    image: thinhbuzz/php-83-apache-xdebug-33-rewrite
+    image: thinhbuzz/php-84-apache-xdebug-34-rewrite
     ports:
       - "80:80"
     volumes:
       - ./:/var/www/html
     restart: "no"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       XDEBUG_CONFIG: remote_host=host.docker.internal
   database:
